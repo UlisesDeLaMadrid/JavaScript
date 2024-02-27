@@ -1,0 +1,12 @@
+console.log("Ulises De la Madrid Lázaro");
+console.log(1990);
+console.log("abc", "def", "ghi");
+console.log("Ulises De la Madrid Lázaro (1990)");
+console.log("Ulises", "De la", "Madrid", "Lázaro", "(1990)");
+console.log("Ulises");
+console.log("De la");
+console.log("Madrid");
+console.log("Lázaro");
+console.log("(1990)");
+console.log("Ulises"+"De la"+"Madrid"+"Lázaro"+"(1990)");
+console.log("Ulises "+"De la "+"Madrid "+"Lázaro "+"(1990)");
