@@ -1,28 +1,26 @@
 module.exports = {
   env: {
     browser: true,
+    commonjs: true,
     es2021: true
   },
-  extends: 'standard',
+  extends: "standard",
   overrides: [
     {
       env: {
         node: true
       },
-      files: ['.eslintrc.{js,cjs}'],
+      files: [".eslintrc.{js,cjs}"],
       parserOptions: {
-        sourceType: 'script'
+        sourceType: "script"
       }
     }
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+    ecmaVersion: "latest"
   },
   rules: {
-    extends: 'standard',
-    rules: {
-      semi: [2, 'always']
-    }
+    semi: [2, "always"],
+    vardouble: "double"
   }
 };
