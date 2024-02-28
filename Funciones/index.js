@@ -25,8 +25,29 @@ imprimir3({
 });
 const perro = "amigo";
 
-function suma (a,b) {
-    let resultado = a + b
-    console.log(resultado)
+function suma(a, b) {
+   let resultado = a + b;
+   console.log(resultado);
 }
-suma(34, 6)
+suma(34, 6);
+
+let num = 0;
+function counter() {
+   if (num >= 10) {
+      return;
+   }
+   num = num + 1;
+   console.log(num);
+   counter();
+}
+
+counter();
+
+const saludo = function saludo(name) {
+   if (!name) return "El campo esta vacio";
+   const saludoCompleto = `Hola ${name}!, mucho gusto.`;
+   return saludoCompleto;
+};
+
+console.log(saludo());
+console.log(saludo("Ulises"));
