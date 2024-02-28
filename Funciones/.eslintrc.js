@@ -20,7 +20,6 @@ module.exports = {
     ecmaVersion: "latest"
   },
   rules: {
-    semi: [2, "always"],
-    vardouble: "double"
+    semi: [2, "false"],
   }
 };

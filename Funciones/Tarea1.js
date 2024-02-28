@@ -1,34 +1,39 @@
 /*Crear una Función que recibe un nombre y **devuelve** un saludo por
 nombre y si no se provee el nombre saludo simplemente por “amigo”*/
 const saludo = function saludo(name) {
-   const noName = "Hola Amigo!, mucho gusto.";
-   if (!name) return noName;
-   const saludoCompleto = `Hola ${name}!, mucho gusto.`;
-   return saludoCompleto;
-};
+   const noName = 'Hola Amigo!, mucho gusto.'
+   if (!name) return noName
+   const saludoCompleto = `Hola ${name}!, mucho gusto.`
+   return saludoCompleto
+}
 
-console.log(saludo());
-console.log(saludo("Ulises"));
+console.log(saludo())
+console.log(saludo('Ulises'))
 
 /*Crear una Función que altere el valor de una variable global cada
 que se ejecuta (no debe retornar nada)*/
-let numero = 0;
+let numero = 0
 const alterar = function alterar() {
-   numero = numero + 1;
-   console.log(numero);
-};
-alterar();
+   numero = numero + 1
+   console.log(numero)
+}
+alterar()
 
 /*Crear una Función que reciba un parametro de tipo numero y
 **regrese** true si el parametro es un número par o false si es un 
 numero inpar*/
 const parImpar = function parImpar(numero) {
-   if (numero % 3 == 0) {
-      const impar = false;
-      return impar;
+   if (typeof numero !== 'number') {
+      const noEs = `Esto "${numero}" no es numero`
+      return noEs
    }
-   const par = true;
-   return par;
-};
 
-console.log(parImpar(33));
+   if (numero % 3 == 0) {
+      const impar = `Tu numero es impar, ${false}`
+      return impar
+   }
+   const par = `Tu numero es par, ${true}`
+   return par
+}
+
+console.log(parImpar('perro'))
