@@ -10,6 +10,18 @@ const saludo = function saludo(name) {
 console.log(saludo())
 console.log(saludo('Ulises'))
 
+/* Lo siguiente es un Arrow function de la funcion de arriba*/
+const saludo2 = (name) => {
+   const noName = 'Hola Amigo!, mucho gusto.'
+   if (!name) return noName
+   const saludoCompleto = `Hola ${name}!, mucho gusto.`
+   return saludoCompleto
+}
+
+console.log(saludo2())
+console.log(saludo2('Ulises'))
+
+
 /*Crear una Función que altere el valor de una variable global cada
 que se ejecuta (no debe retornar nada)*/
 let numero = 0
@@ -24,7 +36,7 @@ alterar()
 numero inpar*/
 const parImpar = function parImpar(numero) {
    if (typeof numero !== 'number') {
-      const noEs = `Esto "${numero}" no es numero`
+      const noEs = `"${numero}" no es numero`
       return noEs
    }
 
@@ -37,3 +49,8 @@ const parImpar = function parImpar(numero) {
 }
 
 console.log(parImpar('perro'))
+
+const hola = function(){
+   return'Hola, Mundo!'
+}
+console.log(hola())
