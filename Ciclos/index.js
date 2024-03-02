@@ -19,6 +19,36 @@ while(o <= 10){
 }
 
 //Esto es un ciclo "For" donde recibe 3 parametros para poder ejecutar las acciones, e igual que "While" se ejecutara mientras los parametro arrojen "True". 
-for (let i = 0;i<=10;i++){
-    console.log('cuanto vale i en for: ',i)
+for (let i = 0;i<4;i++){
+    console.log(colores[i])
+}
+for (let i = 0;i<colores.length;i++){
+    console.log(colores[i])
+}
+//En este caso colores.length define que es el largo del arreglo de colores por lo tanto el for se va a ejecutar el numero de veces que tenga el indice de colores, y abajo se va a imprimir los colores con colores[].
+let j = 0
+while (j < colores.length){
+    console.log('Otros colores: ',colores[j])
+    if (colores[j]==='azul') break
+    j++
+}
+
+//El continue hjace que caundo se cumpla la condicion se la salte y cnobtinue con el ciclo
+
+let k = 0
+
+while (k < colores.length){
+    if (colores[k]==='verde'){
+        k++
+        continue
+    }
+    console.log('Continue de ',colores[k])
+    k++
+}
+
+//Lo mismo que en el anterior ejemplo pero con un 'For'
+
+for (let k=0;k<colores.length;k++){
+    if(colores[k] === 'verde')continue
+    console.log('Continue del for ',colores[k])
 }
