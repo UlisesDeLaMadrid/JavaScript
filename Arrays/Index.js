@@ -3,6 +3,9 @@ function separador() {
       '--------------------------------------------------------------------------'
    )
 }
+function index(index) {
+   return console.log(`${'                  "<<<<<_ '}${index}${' _>>>>>"'}`)
+}
 const numeros = [1, 2, 3, 4, 5]
 const colores = ['blanco', 'azul', 'verde', 'amarillo']
 
@@ -66,6 +69,7 @@ console.log(
 
 //La funcion anterior utiliza un callback .filter para revisar cuantas veces hay exite el elemento dado en la variable buscar dentro del array mascotas
 separador()
+index('.forEach')
 //.forEach Ejecuta la funcion indicada por cada elemento del array
 const colores3 = ['blanco', 'azul', 'verde', 'amarillo']
 colores3.forEach((element) => {
@@ -74,12 +78,36 @@ colores3.forEach((element) => {
 })
 separador()
 
-//.sort ordena los elementos de un arreglo y lo devuelve pero por si solo no es muy estable ya que los ordena de acuerdo a su unicode, para que tenga un funcionamiento mas apropiado hay que pasarle unos parametros que se muestran a continuacion
+index('.sort')
+//.sort ordena los elementos de un arreglo y lo devuelve, pero por si solo no es muy estable ya que los ordena de acuerdo a su unicode, para que tenga un funcionamiento mas apropiado hay que pasarle unos parametros que se muestran a continuacion
 const numeros2 = [
    1, 13, 14, 15, 16, 2, 17, 3, 18, 4, 19, 5, 20, 6, 21, 7, 22, 8, 23, 9, 24,
    10, 11, 12
 ]
-console.log(numeros2.sort())
-console.log(numeros2.sort((a,b)=>a-b))
-console.log(numeros2.sort((a,b)=>b-a))
+console.log(`Comportamiento normal del ${'.sort'}`, numeros2.sort())
+console.log(
+   'Ordenados de menor a mayor: ',
+   numeros2.sort((a, b) => a - b)
+)
+console.log(
+   'Ordenados de mayor a menor: ',
+   numeros2.sort((a, b) => b - a)
+)
 separador()
+
+//Lo siguiente utilizara filter para buscar numeros pares e impares
+const par = numeros2.filter((numero) => numero % 2 == 0)
+const imp = numeros2.filter((numero) => numero % 2 != 0)
+
+console.log(`Numeros pares ${par}`)
+console.log(`Numeros pares ${imp}`)
+separador()
+//Crea un nuevo array con los resultados de la llamada a la funcion indicada aplicados a cada uno de sus elementos, en este caso multiplica por dos cada elemento del array y devuelve uno nuevo con el resultado.
+index('.map')
+const numeros3 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const resultado = numeros3.map((numero) => numero * 2)
+console.log(resultado)
+separador()
+index('Date')
+const nameMonthS = birthday.toLocaleString('en-US', {month: 'short'});
+console.log(nameMonthS)
