@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form action="" method="get" enctype="multipart/form-data"> 
+        <!-- <form></form>: Crear formularios en HTML +++ enctype="multipart/form-data",Es para codificar el formulario para el envio de archivos, +++ action="" es el equivalente a una href="" osea la url de a donde va a ir a parar la informacion, +++ method="" para enviar o publicar la informacion con "post", "get", ("put", "patch", "delete") estos ultimos solo son mediante JavaScript +++ -->
+        <textarea name="blabla" id="" cols="" rows="" placeholder="Escribe algo aqui" required></textarea><!-- <textarea></textarea> Es una caja de texto que para enviar mucho texto+++ name="" hace referencia al dato que recibe, si este campo esta vacio la informacion de este texarea no se manda +++ cols="" y rows="" no se utiliza por que no lo hace responsivo, es mejor darle estilo en CSS +++ placeholder="", indica a el usuario que tipo de dato puede introducir aqui, es como dejarle una pista la cual se borrara al momento que el susario comience a introducir datos +++ disable: desactiva el campo y no se podra introducir datos +++ readonly: no se puede modificar el campo pero si se enviara la informacion dentro de el +++ required: hace que el campo se vuelva obligatorio de rellenar y no se mandara si esta vacio +++ -->
+        <select name="mascotas" id="">
+            <!-- +++ <select></select>:  Sirve para seleccionar de entre una lista de opciones +++ -->
+            <option value="" selected disabled>
+                <!-- +++ <option></option>: Son las opciones que hay en el select +++ Son las opciones de el select +++ value="": es el valor que se le dara a cada opcion, no es necesario que sea el valor del contenido +++ Tambien puede tener disable +++ selected: Hace esta opcion la seleccionada por defecto +++ Un truco para hace un placeholder en select y option es ponerlo manualmente justo como esta opcion-->
+                Selecciona una mascota
+            </option>
+            <option value="Gato">Gato</option>
+            <option value="02">Huron</option>
+            <option value="03">Perro</option>
+        </select>
+        <input type="text"><!-- +++ <input>: Es una etiqueta para crear elementos que reciben algun tipo de dato, es de auto cierre +++ type="": Aqui se va a especificar el tipo de entrada que tendra el input la cual cambiara dependiendo del valor que se indique en este atributo, hay muchos valores para este, lo mejor seria revisar la documentacion para ver cual nos serviria dependiendo el caso +++ A continuacion algunos ejemplos +++ -->
+        <input type="password">
+        <label for="">Perro</label>
+        <input name="mascotas" type="checkbox" value="perro">
+        <label for="">Gato</label>
+        <input name="mascotas" type="checkbox" value="gato">
+        <label for="">Huron</label>
+        <input name="mascotas" type="checkbox" value="huron">
+        <!-- El valor checkbox sirve para seleccionar varias opciones-->
+        <label for="perroID">Perro</label>
+        <!-- <label></label>: Sirve para agregar un texto a los elementos input a los cuales por defecto no hay forma para agregarles texto, ademas con el atributo for="" se pueden relacionar con ellos mediante su ID como valor en este, para que al momento de dar click en el texto se seleccione el input asociado, lo mismo se puede hacer con los <label> asociados a checkbox -->
+        <input id="perroID" name="mascotas" type="radio" value="perro">
+        <label for="gatoID">Gato</label>
+        <input id="gatoID" name="mascotas" type="radio" value="gato">
+        <label for="huronID">Huron</label>
+        <input id="huronID" name="mascotas" type="radio" value="huron">
+        <!-- El valor radio sirve para seleccionar solo una de entre varias opciones-->
+    </form>
+</body>
+</html>
