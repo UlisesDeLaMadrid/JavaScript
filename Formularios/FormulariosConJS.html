@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <script src="./FormulariosConJS.js"></script>
+    <style>
+      label {
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formularios</h1>
+
+    <form id="crud">
+      <input type="text" name="name" placeholder="Nombre" />
+      <br /><br />
+      <input type="tel" name="tel" placeholder="Teléfono" />
+      <br /><br />
+      <input type="email" name="email" placeholder="Correo eléctronico" />
+      <br /><br />
+
+      <select name="tech">
+        <option value="" disabled selected>
+          ¿Te gusta Frontend o Backend?
+        </option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+      </select>
+
+      <p>Selecciona los lenguajes que dominas</p>
+      <input id="html" type="checkbox" name="languages" value="HTML" />
+      <label for="html">HTML</label>
+
+      <input id="js" type="checkbox" name="languages" value="JavaScript" />
+      <label for="js">JavaScript</label>
+
+      <input id="css" type="checkbox" name="languages" value="CSS" />
+      <label for="css">CSS</label>
+
+      <br /><br />
+
+      <textarea name="description" placeholder="Hablame de ti"></textarea>
+
+      <br /><br />
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>

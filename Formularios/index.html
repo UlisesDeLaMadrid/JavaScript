@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./index.js"></script>
 </head>
 <body>
     <h1>Formularios</h1>
     <form action="" method="get" enctype="multipart/form-data"> 
-        <!-- <form></form>: Crear formularios en HTML +++ enctype="multipart/form-data",Es para codificar el formulario para el envio de archivos, +++ action="" es el equivalente a una href="" osea la url de a donde va a ir a parar la informacion, +++ method="" para enviar o publicar la informacion con "post", "get", ("put", "patch", "delete") estos ultimos solo son mediante JavaScript +++ -->
+        <!-- <form></form>: Crear formularios en HTML +++ enctype="multipart/form-data",Es para codificar el formulario para el envio de archivos, +++ action="" es el equivalente a una href="" osea la url de a donde va a ir a parar la informacion, si esta se encuantra sin valor el formulario se enviara localmente +++ method="" para enviar o publicar la informacion con "post", "get", ("put", "patch", "delete") estos ultimos solo son mediante JavaScript, si el valor de este esta vacio, por default sera get +++ -->
         <textarea name="blabla" id="" cols="" rows="" placeholder="Escribe algo aqui" required></textarea><!-- <textarea></textarea> Es una caja de texto que para enviar mucho texto+++ name="" hace referencia al dato que recibe, si este campo esta vacio la informacion de este texarea no se manda +++ cols="" y rows="" no se utiliza por que no lo hace responsivo, es mejor darle estilo en CSS +++ placeholder="", indica a el usuario que tipo de dato puede introducir aqui, es como dejarle una pista la cual se borrara al momento que el susario comience a introducir datos +++ disable: desactiva el campo y no se podra introducir datos +++ readonly: no se puede modificar el campo pero si se enviara la informacion dentro de el +++ required: hace que el campo se vuelva obligatorio de rellenar y no se mandara si esta vacio +++ -->
         <select name="mascotas" id="">
             <!-- +++ <select></select>:  Sirve para seleccionar de entre una lista de opciones +++ -->
@@ -37,6 +38,25 @@
         <label for="huronID">Huron</label>
         <input id="huronID" name="mascotas" type="radio" value="huron">
         <!-- El valor radio sirve para seleccionar solo una de entre varias opciones-->
+        <input type="file" accept="application/pdf" name="cv">
+        <!-- El input de tipo file sirve para crear un boton para enviar archivos, dentro del atributo accept vamos a poner como valor el tipo de archivos que se pueden mandar, en este caso archivos PDF -->
+    </form>
+    <br>
+    <!-- Como enviar los formularios -->
+    <form action="" method="post">
+        <label for="">Name</label>
+        <input type="text" name="name">
+        <br>
+        <br>
+        <label for="">E-mail</label>
+        <input type="email" name="email">
+        <br>
+        <br>
+        <label for="">Phone</label>
+        <input type="tel" name="phone" autocomplete="">
+        <br>
+        <br>
+        <button type="submit">Enviar formulario</button>
     </form>
 </body>
 </html>
