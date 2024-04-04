@@ -44,24 +44,40 @@ if (ordenesEfectivas > montoPrevisto){
 capacidad()
 
 function diaParOImpar () {
+    //Si el dia es par o impar
     if (dia % 2 === 0){
+        /*En caso que el dia sea par, se hace con una operacion de modulo,
+        si el residuo de esta operacion es 0 el dia es par y se imprime un mensaje*/
         console.log('Hoy es un dia es par, asi que la demanda sera alta, preparate!!')
     } else if (dia % 2 === 1 && ordenesEfectivas > montoPrevisto) {
+        /*En caso de que el dia sea impar, se hace con la operacion de modulo y si el residuo es 1 es dia impar, aparte si las ventas del dia superen a las previstas, si ambas condiciones se cumplen
+        entonces se imprime el mensaje*/
     console.log("El dia es impar, pero las ventas superaron las previstas, asi que mañana habra alta demanda")
     } else {
+        /*En este caso si el dia solo es impar se imprime el mensaje y esto se ejecuta si las
+        dos condiciones anteriores no se cumplen*/
         console.log('El dia es impar sera un dia relajado')
     }      
 } 
 diaParOImpar()
 
 function rendimiento (){
+    /*En esta funcion se comprobara el rendimiento con una variable que comprueba que las ventas 
+    del dia superaron a las ventas previstas con una resta y se imprime el resultado como
+    rendimietno total */
     const rendimientoDia = ordenesEfectivas - montoPrevisto
     console.log('Tuviste un rendimietno de: ', rendimientoDia)
     if (rendimientoDia + montoPrevisto > montoPrevisto) {
+        /*Esta condicion suma el rendimiento del dia mas el monto previsto de ventas en caso de que
+        esta operacion sea mayor al monto previsto significa que el rendimiento del dia fue positivo*/
         console.log('Felicidades tuviste un buen rendimietno en ventas')
     } else if (rendimientoDia + montoPrevisto < montoPrevisto) {
+        /*Esta condicion suma el rendimiento del dia mas el monto previsto de ventas en caso de que
+        esta operacion sea menor al monto previsto significa que el rendimiento del dia fue negativo*/
         console.log('Hoy nu fue un buen dia, animo!!!')
     } else {
+        /*Si las condiciones anteriores no se cumplen significa que se vendio lo que se tenia 
+        previsto */
         console.log('Vendiste lo justo, animo!!!')
     }
 }
