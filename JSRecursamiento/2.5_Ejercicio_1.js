@@ -50,8 +50,10 @@ function diaParOImpar () {
         si el residuo de esta operacion es 0 el dia es par y se imprime un mensaje*/
         console.log('Hoy es un dia es par, asi que la demanda sera alta, preparate!!')
     } else if (dia % 2 === 1 && ordenesEfectivas > montoPrevisto) {
-        /*En caso de que el dia sea impar, se hace con la operacion de modulo y si el residuo es 1 es dia impar, aparte si las ventas del dia superen a las previstas, si ambas condiciones se cumplen
-        entonces se imprime el mensaje*/
+        /*En caso de que el dia sea impar, se hace con la operacion
+        de modulo y si el residuo es 1 es dia impar, aparte si las ventas
+        del dia superen a las previstas, si ambas condiciones
+        se cumplenentonces se imprime el mensaje*/
     console.log("El dia es impar, pero las ventas superaron las previstas, asi que mañana habra alta demanda")
     } else {
         /*En este caso si el dia solo es impar se imprime el mensaje y esto se ejecuta si las
