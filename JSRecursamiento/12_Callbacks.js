@@ -1,0 +1,3 @@
+/*
+Es una funcion que pasa como argumento para otra funcion
+*/
