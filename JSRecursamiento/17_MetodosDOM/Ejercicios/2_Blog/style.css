@@ -1,0 +1,16 @@
+.mini-avatar{
+    border-radius: 50%;
+    height: 80px;
+}
+.card-img {
+    height: 300px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+#popular {
+    .card {
+        width: auto;
+    }
+}
