@@ -14,6 +14,7 @@ const persona = {
     edad: 30,
     ciudad: 'Madrid',
 }
+console.log('Objeto persona:', persona)
 
 /*
 Constructor de Objeto: También puedes crear un objeto utilizando el constructor Object() y
@@ -22,9 +23,11 @@ luego asignar propiedades al objeto utilizando la notación de punto (".") o cor
 
 // Declaracion de objeto
 const persona2 = new Object()
-persona.nombre = 'Juan';
-persona.edad = 30;
-persona.ciudad = 'Madrid';
+persona2.nombre = 'Juan';
+persona2.edad = 30;
+persona2.ciudad = 'Madrid';
+
+console.log('Objeto persona2: ', persona2)
 
 /*
 Función Constructora: Las funciones de flecha no tienen sus propios objetos this, arguments,
@@ -33,13 +36,13 @@ no tienen acceso a estas propiedades internas.
 */
 
 // Declaracion de function
-function persona (nombre, edad, ciudad) {
+function persona3 (nombre, edad, ciudad) {
     this.nombre = nombre;
     this.edad = edad;
     this.ciudad = ciudad
   }
   // Incializar objeto
-  const juan = new persona('Juan', 30, 'Madrid');
+  const juan = new persona3('Juan', 30, 'Madrid');
 
 
 /*
@@ -48,7 +51,7 @@ clase para definir un objeto.
 */
 
 // Declaracion de function
-class persona {
+class persona4 {
     constructor (nombre, edad, ciudad) {
      this.nombre= nombre;
      this.edad = edad;
@@ -56,7 +59,7 @@ class persona {
     }
    }
    // Incializar objeto
-   const pedro = new persona('Pedro', 30, 'Madrid');
+   const pedro = new persona4('Pedro', 30, 'Madrid');
 
 
 /*
@@ -78,13 +81,14 @@ Aquí tienes una descripción de la sintaxis de los objetos en JavaScript:
 Sintaxis Básica:
 */
 
-// Declaracion de objeto
+/* Declaracion de objeto
 const objeto = {
     clave1: valor1,
     clave2: valor2,
     clave3: valor3,
    // ...pares de clave-valor adicionales
   }
+*/
 
 /*
 Claves 
